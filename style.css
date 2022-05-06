@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Shadows+Into+Light&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-image: url("Images/FondoCielo.jpg ");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 80vh;
+}
+
+/*------------------ NAVEGACION --------------------*/
+
+.BarraNav{
+  background-image: linear-gradient(to left, #ff0000, #ff5f00, #fc8e00, #f5b500, #ebd812);  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 17PX;
+  height: 50px;
+  padding: 10px;
+}
+
+.BarraNav ul{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.BarraNav li{padding: 10px;}
+
+.BarraNav a{padding: 5px ;color: #fff;}
+
+.BarraNav li a:hover{
+  border-bottom: 3px solid  #FF0000; /* LINEA DEBAJO DEL TEXTO A LA HORA DE TOCARLO*/
+  color:  #FF0000;
+}
+.BarraNav img{
+  width: 60px;
+}
+
+/*---------------------------------------------------------*/
+
+#imgToy {
+  width: 100px;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(0%,-108%);
+}
+
+main {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main h1{
+  color: #ff5f00;
+}
+
+
+
+#frm-register {
+    width: 342px;
+    height: 397px;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #f1c810;
+    border-radius: 15px;
+    background-color:#E8EB00 ;
+}
+
+
+#frm-register input {
+  border: none;
+  border-bottom: 1px solid #ff5f00;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #000;
+  width: 80%;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+}
+
+::placeholder { color: #88858da8; }
+
+.buttons {
+  margin-top: 1rem;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+}
+
+.myButton {
+  border: none;
+  background: #ff5f00;
+  outline: none;
+  height: 40px;
+  width: 90%;
+  color: #000;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  padding-left: 0.5rem;
+}
+.buttons a {
+  color: #000;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+
+.ConteWoody{
+  position: absolute;
+    -webkit-animation: bounce-down 1s linear infinite;
+    animation: bounce-down 1.5s linear infinite;
+}
+
+@-webkit-keyframes bounce-down {
+20%, 100% {
+    -webkit-transform: translateY(0);
+}
+}
+
+@keyframes bounce-down {
+  25% {
+      transform: translateY(-4px);
+  }
+  50%, 100% {
+      transform: translateY(0);
+  }
+  75% {
+      transform: translateY(4px);
+  }
+}

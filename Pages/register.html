@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="shortcut icon" href="/icon.jpg" type="image/x-icon">
+  <title>Login Simulator</title>
+</head>
+<body>
+
+<div>
+    <nav class="BarraNav">
+        <ul class="Nav-menu">
+            <li><a  href="/index.html">Home</a></li>
+            <li><a  href="register.html">Register</a></li>
+            <li><a  href="login.html">Login</a></li>
+        </ul>
+        <ul>
+          <img src="/Images/toyLogo.png" alt="">
+        </ul>
+    </nav>
+</div>
+
+  <main>
+    <form id="frm-register" action="">
+      <img id="imgToy"src="/Images/toy.jpg ">        
+        <h1>REGISTER</h1>
+        <input type="text" id="fullName" placeholder="Full Name" required="true" pattern="[A-Za-z0-9_-]{1,15}">
+        <span id="alert"></span>
+        <input type="text" id="userName" placeholder="userName">
+        <span id="alert2"></span>
+        <input type="password" id="password" placeholder="Insert your password">
+        <input type="password" id="password2" placeholder="confirm your password">
+        <div class="buttons">
+          <button class="myButton" id="btn1">Register</button>
+          <a href="login.html" target="_blank" rel="noopener noreferrer">Login</a>          
+        </div>
+      </fieldset>
+    </form>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
