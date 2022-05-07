@@ -27,8 +27,6 @@ function fullName(e){
     //console.log(e.target.value);
     const re= /^[a-zA-Z\s]{1,16}$/;
     if(re.test(e.target.value)){
-        document.getElementById('fullName').classList.add.remove('formulario-incorrecto');
-        document.getElementById('fullName').classList.add('formulario-correcto');
         console.log("Caracter valido")
         message1.textContent = "";
         // const min= /^[a-zA-Z\s]{1,3}$/;
@@ -42,7 +40,6 @@ function fullName(e){
         // }
     }else{
         console.log("Caracter invalido");
-        document.getElementById('fullName').classList.add('formulario-incorrecto');
         message1.textContent = "Caracter invalido";
         message1.style.color = "red";
     }
