@@ -9,15 +9,28 @@ const message2 = document.getElementById('alert2');
 
 
 
+// login
+const userL = document.getElementById('inputL1');
+const passL = document.getElementById('passwordL');
+const btn1 = document.getElementById('btnL');
+
+//validacion registro
+if(input1){
 input1.addEventListener('keyup',fullName);
 input2.addEventListener('keyup',userName);
 input3.addEventListener('keyup', password);
 input4.addEventListener('keyup', confirmationPassword);
 btn.addEventListener('click', successfulRegister);
+}
 
+// validacion login
+if(btn1){
+    btn1.addEventListener('click', btnLogin);
+}
 
+//=================================================================================================
 
-
+//register
 
 function users(e){
     console.log(e.target.value);
@@ -48,7 +61,7 @@ function fullName(e){
 
 function userName(e){
     console.log(e.target.value);
-    const min= /^[a-zA-Z\s]{1,3}$/;
+    const min= /^[a-zA-Z\s]{1,2}$/;
     if(min.test(e.target.value)){
         console.log("Minimo 3 caracteres");
         message2.textContent = "El usuario debe de tener minimo 3 caracteres";
@@ -88,5 +101,32 @@ function successfulRegister(){
     }else{
         console.log('contraseña incorrecta');
         alert(' contraseña incorrecta');
+    }
+
+
+}
+
+//login
+
+
+
+const usersL = ['Sebastian', 'Tatiana', 'Carlos', 'Stefany', 'Pedro'];
+const passwords = [111, 222, 333, 444, 555];
+
+
+function btnLogin(){
+    for (let i = 0; i < usersL.length; i++) {
+        if(userL.value == usersL[i]){
+            if(passL.value == passwords[i]){
+                alert('Usuario correcto'); 
+            }else if(userL.value != usersL[i]){
+                alert('usuario incorrecto'); 
+            }else if(passL.value != passwords[i]){
+                alert('Contraseña incorrecta');
+            }else{
+                alert('usuario no encontrado');
+            }
+            break;   
+        } 
     }
 }
