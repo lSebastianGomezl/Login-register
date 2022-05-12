@@ -6,8 +6,10 @@ const input4 = document.getElementById('password2');
 const btn = document.getElementById('btn1');
 const message1 = document.getElementById('alert');
 const message2 = document.getElementById('alert2');
+const lista = document.getElementById('list');
 
-
+const usersL = [];
+// let session = localStorage.setItem('personas',JSON.stringify(usersL));
 
 // login
 const userL = document.getElementById('inputL1');
@@ -102,7 +104,11 @@ function successfulRegister(){
         console.log('contraseña incorrecta');
         alert(' contraseña incorrecta');
     }
-
+    usersL.push(input2.value);
+    usersL.push(input3.value);
+    lista.textContent = usersL;
+    let session = localStorage.setItem(input2.value,JSON.stringify(usersL));
+    console.log(session);
 
 }
 
@@ -110,23 +116,37 @@ function successfulRegister(){
 
 
 
-const usersL = ['Sebastian', 'Tatiana', 'Carlos', 'Stefany', 'Pedro'];
-const passwords = [111, 222, 333, 444, 555];
+// const usersL = ['Sebastian', 'Tatiana', 'Carlos', 'Stefany', 'Pedro'];
+// const passwords = [111, 222, 333, 444, 555];
 
 
 function btnLogin(){
-    for (let i = 0; i < usersL.length; i++) {
-        if(userL.value == usersL[i]){
-            if(passL.value == passwords[i]){
-                alert('Usuario correcto'); 
-            }else if(userL.value != usersL[i]){
-                alert('usuario incorrecto'); 
-            }else if(passL.value != passwords[i]){
-                alert('Contraseña incorrecta');
-            }else{
-                alert('usuario no encontrado');
-            }
-            break;   
-        } 
+    // let keyUser = $.parseJSON(localStorage.getItem(localStorage.key(0)));
+    for(let i = 0; i < localStorage.length;i++){
+        let key1 = localStorage.key[i];
+
+        if(localStorage.key1[i] == passL.value){
+            // alert('registro exitoso');
+            console.log(localStorage.key1[i]);
+        }else{
+            // alert('.l.');
+            console.log(localStorage.key1[i]);
+        }
     }
+
 }
+
+    // for (let i = 0; i < usersL.length; i++) {
+    //     if(userL.value == usersL[i]){
+    //         if(passL.value == passwords[i]){
+    //             alert('Usuario correcto');
+    //         }else if(userL.value != usersL[i]){
+    //             alert('usuario incorrecto');
+    //         }else if(passL.value != passwords[i]){
+    //             alert('Contraseña incorrecta');
+    //         }else{
+    //             alert('usuario no encontrado');
+    //         }
+    //         break;
+    //     }
+    // }
